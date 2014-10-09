@@ -17,7 +17,13 @@ module.exports = function(context) {
             layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             })
+        },  {
+            title: 'GreyCanvas',
+            layer: L.mapbox.tileLayer('hillcrestgeo.map-m0uznrej', {
+                detectRetina: true
+            })
         }];
+
 
         var layerSwap = function(d) {
             var clicked = this instanceof d3.selection ? this.node() : this;
